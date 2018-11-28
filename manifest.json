@@ -9,5 +9,6 @@
       "matches": ["https://*/owa/*"],
       "js": ["outlook-unread-count.js"]
     }
-  ]
+  ],
+  "permissions": ["https://*/owa/*"]
 }

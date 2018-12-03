@@ -16,12 +16,8 @@ var favicon=new Favico({
 
 function update_unread() {
     try	{
-        var CurrVal = document.getElementsByClassName('_n_H4')[0].innerText;
-        if (CurrVal <= 99) {
-            favicon.badge(CurrVal);
-        } else {
-            favicon.badge("99+");
-        }
+        var CurrVal = document.getElementsByClassName('ms-fwt-sb')[0].innerText;
+        favicon.badge(CurrVal);
     } catch(err) {
         favicon.badge(0);
     }

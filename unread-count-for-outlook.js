@@ -20,16 +20,19 @@ function log(message) {
 
 function update_unread() {
     let currVal = 0;
-    let highlightedElements = document.getElementsByClassName('ms-fwt-sb');
+    let highlightedElements = document.getElementsByTagName('span');
     for (let i = 0; i < highlightedElements.length; i++) {
-        let text = highlightedElements[i].innerText.trim();
-        if (text.length > 0 && !Number.isNaN(Number(text))) {
-            currVal = Number(text);
-            break;
+        let child = highlightedElements[i].firstChild;
+        if(child && child.nodeType === 3) {
+            let text =child.data.trim();
+            if (text.length > 0 && !Number.isNaN(Number(text))) {
+                currVal = Number(text);
+                break;
+            }
         }
     }
     favicon.badge(currVal);
 }
 
-log("starting oulook unread count extension");
+log("Starting unread count for Outlook extension");
 window.setInterval(update_unread, 1000);

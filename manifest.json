@@ -6,13 +6,9 @@
   "icons": { "128": "icon.png" },
   "content_scripts": [
     {
-      "matches": ["https://*/owa/*"],
-      "js": ["unread-count-for-outlook.js"]
-    },
-    {
-      "matches": ["https://*/mail/*"],
+      "matches": ["https://*/owa/*", "https://*.outlook.com/*", "https://*.office.com/*"],
       "js": ["unread-count-for-outlook.js"]
     }
   ],
-  "permissions": ["https://*/owa/*"]
+  "permissions": ["tabs", "https://*/owa/*", "https://*.outlook.com/*", "https://*.office.com/*"]
 }

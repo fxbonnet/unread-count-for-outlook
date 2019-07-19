@@ -1,7 +1,7 @@
 {
   "name": "Unread count for Outlook",
   "manifest_version": 2,
-  "version": "1.4",
+  "version": "1.5",
   "description": "A Chrome plugin to display Outlook unread messages count on the tab.",
   "icons": {
     "128": "icon.png"
@@ -15,6 +15,7 @@
         "https://*/mail/inbox*"
       ],
       "js": [
+        "favico-0.3.10.min.js",
         "unread-count-for-outlook.js"
       ]
     }

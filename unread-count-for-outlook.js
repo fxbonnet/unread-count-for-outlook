@@ -7,7 +7,6 @@ window.addEventListener("load", (event) => {
     });
 
     function update_unread() {
-		console.log("update_unread");
         let currVal = 0;
         let highlightedElements = document.getElementsByTagName('span');
         for (let i = 0; i < highlightedElements.length; i++) {
@@ -25,7 +24,6 @@ window.addEventListener("load", (event) => {
     }
 	
 	function deferred_update_unread() {
-		console.log("deferred_update_unread");
 		setTimeout(update_unread, 1000);
 	}
 

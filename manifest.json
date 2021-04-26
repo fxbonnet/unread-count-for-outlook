@@ -11,6 +11,7 @@
       "matches": [
         "https://*/owa/*",
         "https://*.outlook.com/*",
+        "https://outlook.live.com/*",
         "https://*.office.com/*",
         "https://*/mail/inbox*"
       ],
@@ -24,6 +25,7 @@
     "tabs",
     "https://*/owa/*",
     "https://*.outlook.com/*",
+    "https://outlook.live.com/*",
     "https://*.office.com/*",
     "https://*/mail/inbox*"
   ]

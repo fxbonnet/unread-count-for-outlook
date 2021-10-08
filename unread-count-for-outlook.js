@@ -13,7 +13,7 @@ window.addEventListener("load", (event) => {
         for (let i = 0; i < iElements.length; i++) {
             let iElement = iElements[i];
             if (iElement.attributes['data-icon-name'] && iElement.attributes['data-icon-name'].value === 'Inbox') {
-                let numericValue = findSpanWithNumber(iElement.parentElement);
+                let numericValue = findSpanWithNumber(iElement.parentElement.parentElement);
                 if (numericValue)
                     favicon.badge(numericValue);
                 return;

@@ -12,7 +12,7 @@ window.addEventListener("load", (event) => {
         let iElements = document.getElementsByTagName('i');
         for (let i = 0; i < iElements.length; i++) {
             let iElement = iElements[i];
-            if (iElement.attributes['data-icon-name'] && iElement.attributes['data-icon-name'].value === 'Inbox') {
+            if (isInboxIcon(iElement)) {
                 let numericValue = findSpanWithNumber(iElement.parentElement.parentElement);
                 if (numericValue)
                     favicon.badge(numericValue);
@@ -23,6 +23,18 @@ window.addEventListener("load", (event) => {
         let numericValue = findSpanWithNumber(document);
         if (numericValue)
             favicon.badge(numericValue);
+    }
+
+    function isInboxIcon(iElement) {
+        if (!iElement.attributes['data-icon-name']) {
+            return false;
+        }
+        let value = iElement.attributes['data-icon-name'].value;
+        if (typeof value === "string") {
+            return value.toLowerCase().includes("inbox");
+        } else {
+            return false;
+        }
     }
 
     function findSpanWithNumber(element) {
